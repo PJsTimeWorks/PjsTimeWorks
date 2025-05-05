@@ -21,17 +21,18 @@ export default function SadPage() {
         <p className="text-xl text-gray-300 leading-relaxed">
           This isn’t fashion. This isn’t a trend. These watches were built for
           people in the deepest part of the dark, For the ones who don’t know if
-          they’ll make it through the day. They don’t shine, they don’t
-          distract. They don’t feed you false hope. They sit with you, quietly,
-          sometimes, that’s all we need. Each watch in this collection carries a
-          message, etched into the dial, whispered at the 6 o’clock mark, and
-          resting heavy in its design. There is also a secret engraved on the
-          case back: a message, and a number. Because when you're at the edge,
-          just one conversation can be enough to pull you back. These watches
-          aren’t meant to cheer you up. They’re built to hold space for you, and
-          to remind the owner of person that loved them enough to give it to
-          them. If you bought this for yourself…I can relate. Perhaps, this is
-          exactly what you needed to feel something again.
+          they’ll make it through the day. They don’t shine. They don’t
+          distract. They don’t feed you false hope. They sit with you. Quietly.
+          And sometimes, that’s all we need. Each watch in this collection
+          carries a message, etched into the dial, whispered at the 6 o’clock
+          mark, and resting heavy in its design. There is also a secret engraved
+          on the case back: a message, and a number. Because when the pain is so
+          strong and everything feels hopeless, just one conversation may make
+          the difference. These watches aren’t meant to give happiness. They’re
+          built as tools for emotional survival, And to remind the wearer of the
+          person who loved them enough to give it to them. If you bought this
+          for yourself… I can relate. Perhaps, this is exactly what you needed
+          to feel something again. PJ
         </p>
       </section>
 
@@ -41,19 +42,19 @@ export default function SadPage() {
           {
             name: "Please don't go",
             img: "/please.png",
-            price: "$680",
-            desc: "Built for the ones hanging on—or for those who love them.This piece is a plea, a reminder, and a companion. Sometimes it’s a whisper to yourself. Sometimes it’s a quiet message from someone who cares. And sometimes, it feels like the watch itself is speaking—your companion, keeping time when you're on the edge of something irreversible. Wherever it lands, it’s here to say: Don’t go. Not yet.",
+            price: "$320",
+            desc: "The Please Don’t Go is not here to dazzle, it’s here to stay. The 38mm case is finished in dark industrial steel, sandblasted, soaked in aluminum oxide, and acid-rinsed to a raw, unpolished tone. No gloss. No shine. Just truth. Its dial is a grey parchment-style texture, the typeface is simple, grounded, and dark against the dial, intentionally hard to read in low light, because this watch isn’t about performance. It’s about presence. At 6 o’clock, the message: “Please don’t go.” Not decoration. Not branding. A whisper to someone. A plea. A reason. The strap is distressed dark leather, broken in, not broken down. Meant to feel like it's been with you a long time. It has a quality automatic heart that will beat for decades. Full 30 day no questions asked return, and a full 1 year warranty.",
           },
           {
             name: "I love you. Goodbye.",
             img: "/sad-watch.png",
-            price: "$720",
+            price: "$360",
             desc: "Final words, never forgotten. A warm, worn memory built into the dial.",
           },
           {
             name: "You're Not Alone.",
             img: "/stay.png",
-            price: "$660",
+            price: "$320",
             desc: "Not a command. A whisper. For when you're not sure you can—but wear it anyway.",
           },
         ].map((watch) => (
