@@ -19,18 +19,18 @@ export default function SadPage() {
       {/* Description */}
       <section className="max-w-3xl mx-auto text-center mb-12">
         <p className="text-xl text-gray-300 leading-relaxed">
-          This line wasn't designed. It was felt—in the quiet moments when
-          nothing feels worth waking up for. When joy is a memory. When hope has
-          packed its bags and left without saying goodbye. These watches aren't
-          meant to cheer you up. They don't sparkle. They don't promise things
-          will get better. They just exist—like you do—still ticking, even when
-          it hurts to move. Every dial in this collection is stripped down, raw,
-          and distant. Muted linen textures. Cold steel. Silence between the
-          seconds. They're not broken. They're not healed. They're somewhere in
-          between—just like the people who wear them. The Sad collection is for
-          the ones who cry without reason, for the ones who feel everything and
-          nothing all at once. For the ones still here, even when they don't
-          know why. This line doesn't offer comfort. It offers companionship.
+          This line wasn’t designed. It was felt—in the silent moments when
+          nothing feels worth waking up for. When joy is just a memory. When
+          hope packed its bags and left without saying goodbye. These watches
+          don’t sparkle. They don’t cheer you up. They don’t lie to you. They
+          just exist—like you do—still ticking, even when it hurts to move.
+          Every dial in this collection is stripped down, raw, and distant.
+          Muted textures. Cold steel. Silence between the seconds. They’re not
+          broken. They’re not healed. They’re somewhere in between—just like the
+          people who wear them. The Sad Collection is for the ones who cry
+          without reason. Who feel everything and nothing all at once. Who are
+          still here, even when they don’t know why. This line doesn’t offer
+          comfort. It offers companionship.
         </p>
       </section>
 
@@ -41,7 +41,7 @@ export default function SadPage() {
             name: "Please don't go",
             img: "/please.png",
             price: "$680",
-            desc: "Built for the ones hanging on—or for those who love them. This piece is a plea, a reminder, and a companion. Sometimes it’s the dial begging a friend to stay. Sometimes it’s a whisper to yourself, when you're close to doing something irreversible. Wherever it lands, it’s here to say: don’t leave. Not yet.",
+            desc: "Built for the ones hanging on—or for those who love them.This piece is a plea, a reminder, and a companion. Sometimes it’s a whisper to yourself. Sometimes it’s a quiet message from someone who cares. And sometimes, it feels like the watch itself is speaking—your companion, keeping time when you're on the edge of something irreversible. Wherever it lands, it’s here to say: Don’t go. Not yet.",
           },
           {
             name: "I love you. Goodbye.",
@@ -50,7 +50,7 @@ export default function SadPage() {
             desc: "Final words, never forgotten. A warm, worn memory built into the dial.",
           },
           {
-            name: "Stay.",
+            name: "You're Not Alone.",
             img: "/stay.png",
             price: "$660",
             desc: "Not a command. A whisper. For when you're not sure you can—but wear it anyway.",
