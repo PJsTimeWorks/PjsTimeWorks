@@ -12,7 +12,7 @@ export default function SadPage() {
           Sad Collection
         </h1>
         <p className="text-lg text-gray-400 italic max-w-2xl mx-auto">
-          For when the world goes quiet.
+          A watch that matches your emotion, without trying to change it.
         </p>
       </section>
 
