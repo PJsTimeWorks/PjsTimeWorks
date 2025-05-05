@@ -34,9 +34,41 @@ export default function SadPage() {
         </p>
       </section>
 
-      {/* Placeholder for gallery */}
-      <section className="text-center text-gray-500 italic">
-        <p>Watches coming soon.</p>
+      {/* Gallery */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {[
+          {
+            name: "Please don't go",
+            img: "/please.png",
+            price: "$680",
+            desc: "Built for the ones hanging on—or for those who love them. This piece is a plea, a reminder, and a companion. Sometimes it’s the dial begging a friend to stay. Sometimes it’s a whisper to yourself, when you're close to doing something irreversible. Wherever it lands, it’s here to say: don’t leave. Not yet.",
+          },
+          {
+            name: "I love you. Goodbye.",
+            img: "/sad-watch.png",
+            price: "$720",
+            desc: "Final words, never forgotten. A warm, worn memory built into the dial.",
+          },
+          {
+            name: "Stay.",
+            img: "/stay.png",
+            price: "$660",
+            desc: "Not a command. A whisper. For when you're not sure you can—but wear it anyway.",
+          },
+        ].map((watch) => (
+          <div key={watch.name} className="text-center">
+            <img
+              src={watch.img}
+              alt={watch.name}
+              className="mb-4 rounded-xl shadow-md w-full object-cover"
+            />
+            <h3 className="text-2xl text-zinc-300 font-semibold mb-1">
+              {watch.name}
+            </h3>
+            <p className="text-gray-400 italic mb-2">{watch.desc}</p>
+            <p className="text-zinc-400 font-bold">{watch.price}</p>
+          </div>
+        ))}
       </section>
     </main>
   );
