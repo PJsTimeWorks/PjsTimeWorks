@@ -49,7 +49,7 @@ export default function SadPage() {
             name: "I love you. Goodbye.",
             img: "/sad-watch.png",
             price: "$360",
-            desc: "Final words, never forgotten. A warm, worn memory built into the dial.",
+            desc: "The I Love You, Goodbye is a watch for those living with loss. Its dial is designed to look like crumpled, aged college-ruled notebook paper. The words “I Love You, Goodbye” and the numbers are handwritten in No. 2 pencil, then sealed under a thin coat of epoxy. These words aren’t meant to reopen wounds. They’re meant to sit with you—to remind you of someone you had to let go. For some, images hurt too much. But words? They land softer. They echo, not stab. And they can bring back the memories without overwhelming the heart. The case is dark industrial steel—raw and unpolished. The strap is distressed leather, worn like a memory that’s been carried for years. On the case back there are support tools, engraved for the moments when things get heavy. This watch won’t fix the pain. But it may help you carry it. 30 day no questions asked return, and a full 1 year warranty.",
           },
           {
             name: "You're Not Alone.",
