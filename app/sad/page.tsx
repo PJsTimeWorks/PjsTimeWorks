@@ -19,18 +19,19 @@ export default function SadPage() {
       {/* Description */}
       <section className="max-w-3xl mx-auto text-center mb-12">
         <p className="text-xl text-gray-300 leading-relaxed">
-          This line wasn’t designed. It was felt—in the silent moments when
-          nothing feels worth waking up for. When joy is just a memory. When
-          hope packed its bags and left without saying goodbye. These watches
-          don’t sparkle. They don’t cheer you up. They don’t lie to you. They
-          just exist—like you do—still ticking, even when it hurts to move.
-          Every dial in this collection is stripped down, raw, and distant.
-          Muted textures. Cold steel. Silence between the seconds. They’re not
-          broken. They’re not healed. They’re somewhere in between—just like the
-          people who wear them. The Sad Collection is for the ones who cry
-          without reason. Who feel everything and nothing all at once. Who are
-          still here, even when they don’t know why. This line doesn’t offer
-          comfort. It offers companionship.
+          This isn’t fashion. This isn’t a trend. These watches were built for
+          people in the deepest part of the dark, For the ones who don’t know if
+          they’ll make it through the day. They don’t shine, they don’t
+          distract. They don’t feed you false hope. They sit with you, quietly,
+          sometimes, that’s all we need. Each watch in this collection carries a
+          message, etched into the dial, whispered at the 6 o’clock mark, and
+          resting heavy in its design. There is also a secret engraved on the
+          case back: a message, and a number. Because when you're at the edge,
+          just one conversation can be enough to pull you back. These watches
+          aren’t meant to cheer you up. They’re built to hold space for you, and
+          to remind the owner of person that loved them enough to give it to
+          them. If you bought this for yourself…I can relate. Perhaps, this is
+          exactly what you needed to feel something again.
         </p>
       </section>
 
