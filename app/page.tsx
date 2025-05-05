@@ -1,9 +1,19 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white font-sans">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center h-screen px-6">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-wide">Renka</h1>
+        <div className="mb-6">
+          <Image
+            src="/logo.png"
+            alt="Renka Logo"
+            width={500}
+            height={400}
+            priority
+          />
+        </div>
         <p className="mt-4 text-lg text-gray-400 italic">
           Time doesn’t heal. But it remembers.
         </p>
@@ -15,30 +25,37 @@ export default function Home() {
           {
             title: "Sad",
             desc: "For when the world goes quiet.",
-            bg: "bg-gradient-to-tr from-gray-700 to-black",
+            img: "/sad-watch.png",
           },
           {
             title: "Inspirational",
             desc: "For those still standing.",
-            bg: "bg-gradient-to-tr from-yellow-600 to-orange-500",
+            img: "/inspirational-watch.png",
           },
           {
             title: "Vintage Soul",
             desc: "Original dials, reborn.",
-            bg: "bg-gradient-to-tr from-zinc-800 to-neutral-600",
+            img: "/vintage-soul-watch.png",
           },
           {
             title: "Personality",
             desc: "One of one. Just like them.",
-            bg: "bg-gradient-to-tr from-indigo-700 to-purple-600",
+            img: "/personality-watch.png",
           },
         ].map((line) => (
           <div
             key={line.title}
-            className={`rounded-xl p-6 ${line.bg} hover:scale-105 transition-transform duration-300 cursor-pointer`}
+            className="relative h-64 rounded-xl overflow-hidden group shadow-md cursor-pointer"
           >
-            <h2 className="text-3xl font-semibold">{line.title}</h2>
-            <p className="mt-2 text-gray-300">{line.desc}</p>
+            <div
+              className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+              style={{ backgroundImage: `url(${line.img})` }}
+            />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300" />
+            <div className="relative z-10 p-6 flex flex-col justify-end h-full text-white">
+              <h2 className="text-3xl font-bold">{line.title}</h2>
+              <p className="text-sm text-gray-300 mt-1">{line.desc}</p>
+            </div>
           </div>
         ))}
       </section>
