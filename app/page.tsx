@@ -28,29 +28,33 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 pb-20 max-w-6xl mx-auto">
         {[
           {
-            title: "Unspoken collection",
-            desc: "For when the world goes quiet.",
+            title: "Unspoken Collection",
+            desc: "A watch that matches your emotion, without trying to change it.",
             img: "/sad-watch.png",
+            link: "/unspoken",
           },
           {
-            title: "Undying Hope collection",
+            title: "Undying Hope Collection",
             desc: "For those still standing.",
             img: "/inspirational-watch.png",
+            link: "/undying-hope",
           },
           {
-            title: "Vintage Soul collection",
+            title: "Vintage Soul Collection",
             desc: "Original dials, reborn.",
             img: "/vintage-soul-watch.png",
+            link: "/vintage-soul",
           },
           {
             title: "Identity Collection",
             desc: "One of one. Just like them.",
             img: "/personality-watch.png",
+            link: "/identity",
           },
         ].map((line) => (
           <a
             key={line.title}
-            href={`/${line.title.toLowerCase().replace(" ", "-")}`}
+            href={line.link}
             className="block relative h-64 rounded-xl overflow-hidden group shadow-md cursor-pointer"
           >
             <div className="absolute inset-0 overflow-hidden">
