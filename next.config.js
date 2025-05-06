@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove invalid 'appDir' setting
+  reactStrictMode: true,
+  experimental: {
+    appDir: true, // ✅ THIS TELLS VERCEL TO USE APP ROUTER!
+  },
 };
 
 module.exports = nextConfig;
