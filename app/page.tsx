@@ -28,22 +28,22 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 pb-20 max-w-6xl mx-auto">
         {[
           {
-            title: "Sad",
+            title: "Unspoken collection",
             desc: "For when the world goes quiet.",
             img: "/sad-watch.png",
           },
           {
-            title: "Inspirational",
+            title: "Undying Hope collection",
             desc: "For those still standing.",
             img: "/inspirational-watch.png",
           },
           {
-            title: "Vintage Soul",
+            title: "Vintage Soul collection",
             desc: "Original dials, reborn.",
             img: "/vintage-soul-watch.png",
           },
           {
-            title: "Personality",
+            title: "Identity Collection",
             desc: "One of one. Just like them.",
             img: "/personality-watch.png",
           },

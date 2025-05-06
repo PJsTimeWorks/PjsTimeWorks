@@ -8,8 +8,8 @@ export default function SadPage() {
     >
       {/* Hero */}
       <section className="text-center mb-16">
-        <h1 className="text-7xl md:text-7xl text-zinc-400 drop-shadow-md mb-4">
-          Sad Collection
+        <h1 className="text-5xl md:text-7xl text-zinc-400 drop-shadow-md mb-4">
+          Unspoken Collection
         </h1>
         <p className="text-lg text-gray-400 italic max-w-2xl mx-auto">
           A watch that matches your emotion, without trying to change it.
