@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Cinzel } from "next/font/google";
 const cinzel = Cinzel({ subsets: ["latin"], weight: "400" });
