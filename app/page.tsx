@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Great_Vibes } from "next/font/google";
+
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
         <p
           className={`mt-7 text-3xl italic text-zinc-400 ${greatVibes.className}`}
         >
-          Time doesn't heal. But it remembers.
+          Time doesn&#39;t heal. But it remembers.
         </p>
       </section>
 
