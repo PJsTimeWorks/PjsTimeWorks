@@ -1,57 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Cinzel } from "next/font/google";
+
 const cinzel = Cinzel({ subsets: ["latin"], weight: "400" });
 
 export default function UnspokenCollectionPage() {
+  const [showMeaning, setShowMeaning] = useState<string | null>(null);
+
   const watches = [
     {
       name: "Please don't go",
       img: "/please.png",
-      gallery: ["/please.png", "/please-angle.png"],
       price: "$320",
-      desc: "38mm dark industrial steel case, grey parchment-style dial, distressed charcoal leather strap, faint text at 6 o'clock: 'Please don’t go.' Automatic movement. 1-year warranty.",
+      desc: "The Please Don’t Go is not here to dazzle, it’s here to stay. The 38mm case is finished in dark industrial steel, sandblasted, soaked in aluminum oxide, and acid-rinsed to a raw, unpolished tone. No gloss. No shine. Just truth. Its dial is a grey parchment-style texture, the typeface is simple, grounded, and dark against the dial, intentionally hard to read in low light, because this watch isn’t about performance. It’s about presence. At 6 o’clock, the message: “Please don’t go.” Not decoration. Not branding. A whisper to someone. A plea. A reason. The strap is distressed dark leather, broken in, not broken down. Meant to feel like it's been with you a long time. It has a quality automatic heart that will beat for decades.",
       meaning:
-        "A whisper to stay. A reason not to give in. Built for the moments that ache the most.",
-      story: `The Please Don’t Go is not here to dazzle, it’s here to stay. The 38mm case is finished in dark industrial steel—sandblasted, soaked in aluminum oxide, and acid-rinsed to a raw, unpolished tone. No gloss. No shine. Just truth.
-
-Its dial is a grey parchment-style texture, the typeface is simple, grounded, and dark against the dial, intentionally hard to read in low light, because this watch isn’t about performance. It’s about presence.
-
-At 6 o’clock, the message: “Please don’t go.” Not decoration. Not branding. A whisper to someone. A plea. A reason.
-
-The strap is distressed dark leather, broken in, not broken down. Meant to feel like it's been with you a long time. It has a quality automatic heart that will beat for decades.
-
-This watch is either meant for someone you couldn’t hold onto—or someone you still hope you can. Or maybe, it’s for yourself. A subtle companion when the thoughts get dark. A quiet voice that says: stay.`,
+        "Built for the ones hanging on—or those who love them. A quiet reminder to stay, even when it’s hard.",
     },
     {
       name: "I love you. Goodbye.",
       img: "/sad-watch.png",
-      gallery: ["/sad-watch.png", "/sad-detail.png"],
       price: "$360",
-      desc: "Notebook-style dial with handwritten pencil text sealed under epoxy. 38mm blasted case, distressed strap. Quiet and weighty.",
+      desc: "The I Love You, Goodbye is a watch for those living with loss. Its dial is designed to look like crumpled, aged college-ruled notebook paper. The words are handwritten in No. 2 pencil and sealed under epoxy. The case is raw dark steel. The strap? Worn leather, like a memory you still carry.",
       meaning:
-        "Built for those still carrying the words they never wanted to hear.",
-      story: `The I Love You, Goodbye is a watch for those living with loss. Its dial is designed to look like crumpled, aged college-ruled notebook paper.
-
-The words “I Love You, Goodbye” and the numbers are handwritten in No. 2 pencil, then sealed under a thin coat of epoxy. These words aren’t meant to reopen wounds. They’re meant to sit with you—to remind you of someone you had to let go.
-
-For some, images hurt too much. But words? They land softer. They echo, not stab. And they can bring back the memories without overwhelming the heart.
-
-The case is dark industrial steel—raw and unpolished. The strap is distressed leather, worn like a memory that’s been carried for years. On the case back there are support tools, engraved for the moments when things get heavy.
-
-This watch won’t fix the pain. But it may help you carry it.`,
+        "For those who had to let someone go. This isn’t closure. It’s remembrance.",
     },
     {
       name: "You're Not Alone.",
       img: "/stay.png",
-      gallery: ["/stay.png"],
       price: "$320",
-      desc: "Soft slate linen dial, matte hands, faint type near 6. 38mm case, distressed strap. Subtle, silent, steady.",
-      meaning: "For when you're hurting in silence—this one listens.",
-      story: `A soft slate linen dial, subtle matte hands, and faint text just above the 6. The 38mm case holds a blasted steel finish, and the strap is weathered but not torn. Understated and quiet, it won’t draw attention. It will just be there. And sometimes, that’s enough.
-
-This is not a flashy piece—it’s built to be present, not perform. It’s a gentle reminder, worn close, for those who carry too much in silence. The kind of piece that never interrupts—but also never leaves.`,
+      desc: "The dial whispers “Stay.” The 38mm dark steel case is matte and quiet. It’s paired with a leather strap that feels like it’s always been there. For when you can’t talk about it—but want to feel understood.",
+      meaning:
+        "Not a command. A whisper. For when you’re not sure you can—but wear it anyway.",
     },
   ];
 
@@ -72,65 +53,49 @@ This is not a flashy piece—it’s built to be present, not perform. It’s a g
       {/* Description */}
       <section className="max-w-3xl mx-auto text-center mb-12">
         <p className="text-xl text-gray-300 leading-relaxed">
-          This isn’t fashion. This isn’t a trend. These watches were built for
-          people in the deepest part of the dark. They don’t shine. They don’t
-          distract. They sit with you—quietly. Each one has a message, a voice,
-          and a reason to exist. This line doesn’t offer comfort. It offers
-          companionship.
+          These watches were built for people in the darkest places. Not to
+          cheer them up, but to sit with them. Silently. Honestly. Every watch
+          carries a quiet message, engraved to be seen when it matters. This
+          line is a reminder: you are still here.
         </p>
       </section>
 
       {/* Gallery */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {watches.map((watch, i) => {
-          const [showStory, setShowStory] = useState(false);
-
-          return (
-            <div key={watch.name} className="text-center">
-              <img
+        {watches.map((watch) => (
+          <div key={watch.name} className="text-center">
+            <div className="mb-4">
+              <Image
                 src={watch.img}
                 alt={watch.name}
-                className="mb-4 rounded-xl shadow-md w-full object-cover"
+                width={500}
+                height={500}
+                className="rounded-xl shadow-md object-cover w-full h-auto"
               />
-              {watch.gallery.length > 1 && (
-                <div className="flex gap-2 justify-center mb-4">
-                  {watch.gallery.map((img, idx) => (
-                    <img
-                      key={idx}
-                      src={img}
-                      alt={`${watch.name} - ${idx}`}
-                      className="w-20 h-20 object-cover rounded shadow"
-                    />
-                  ))}
-                </div>
-              )}
-              <h3 className="text-2xl text-zinc-300 font-semibold mb-1">
-                {watch.name}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-1">
-                {watch.desc}
-              </p>
-              <p className="italic text-zinc-500 text-sm mb-2">
+            </div>
+            <h3 className="text-2xl text-zinc-300 font-semibold mb-1">
+              {watch.name}
+            </h3>
+            <p className="text-gray-400 italic mb-2">{watch.desc}</p>
+            <p className="text-zinc-400 font-bold">{watch.price}</p>
+            <button
+              onClick={() =>
+                setShowMeaning(showMeaning === watch.name ? null : watch.name)
+              }
+              className="mt-2 text-sm text-blue-400 underline"
+            >
+              {showMeaning === watch.name ? "Hide meaning" : "Watch meaning"}
+            </button>
+            {showMeaning === watch.name && (
+              <p className="mt-2 text-sm text-gray-400 italic">
                 {watch.meaning}
               </p>
-              <p className="text-zinc-400 font-bold mb-4">{watch.price}</p>
-              <button
-                onClick={() => setShowStory(!showStory)}
-                className="text-sm text-blue-400 underline hover:text-blue-200 mb-2"
-              >
-                {showStory ? "Hide Watch Meaning" : "Read Watch Meaning"}
-              </button>
-              {showStory && (
-                <p className="text-sm text-gray-300 whitespace-pre-line mb-4">
-                  {watch.story}
-                </p>
-              )}
-              <button className="bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-zinc-200 transition">
-                Add to Cart
-              </button>
-            </div>
-          );
-        })}
+            )}
+            <button className="mt-4 bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200">
+              Add to Cart
+            </button>
+          </div>
+        ))}
       </section>
     </main>
   );
