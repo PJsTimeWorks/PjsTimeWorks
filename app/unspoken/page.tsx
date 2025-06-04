@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Cinzel } from "next/font/google";
+import { useCart } from "../cart-context";
 
 const cinzel = Cinzel({ subsets: ["latin"], weight: "400" });
 
 export default function UnspokenCollectionPage() {
   const [showMeaning, setShowMeaning] = useState<string | null>(null);
+  const { addItem } = useCart();
 
   const watches = [
     {
@@ -91,7 +93,12 @@ export default function UnspokenCollectionPage() {
                 {watch.meaning}
               </p>
             )}
-            <button className="mt-4 bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200">
+            <button
+              onClick={() =>
+                addItem({ name: watch.name, price: watch.price, img: watch.img })
+              }
+              className="mt-4 bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200"
+            >
               Add to Cart
             </button>
           </div>
